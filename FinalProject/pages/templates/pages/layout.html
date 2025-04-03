@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for responsiveness and SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="sneakers, shoes, fashion">
+    <meta name="description" content="Alex's Sport & Sneaker Lounge - Your go-to place for the latest sneakers, sportswear, and fashion trends. Shop now!">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    
+    <!-- Title (can be overridden by child templates) -->
+    <title>{% block title %}Alex's Sport & Sneaker Lounge{% endblock %}</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'pages/images/icon.jpg' %}" type="image/jpg">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="{% static 'pages/js/script.js' %}" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="text-white text-center py-3 d-flex justify-content-between align-items-center px-4">
+        <div class="container">
+            <img src="{% static 'pages/images/logo.jpg' %}" alt="Alex's Logo" width="50" height="50">
+            <h1 class="ms-3 mb-0">Alex's Sport & Sneaker Lounge</h1>
+        </div>
+        <button id="darkModeToggle" class="btn btn-light" aria-label="Toggle Dark Mode">
+            <i class="bi bi-moon-fill"></i>
+        </button>
+    </header>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top" role="navigation" aria-label="Main Navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand d-none ms-5" id="navLogo" href="{% url 'home' %}">
+                <img src="{% static 'pages/images/logo.jpg' %}" alt="Alex's Logo" width="40" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content Area -->
+    <main class="container my-5">
+        {% block content %}
+        <!-- Child templates insert their content here -->
+        {% endblock %}
+    </main>
+    
+    <!-- Footer Section -->
+    <footer class="text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Alex's Sport & Sneaker Lounge. All rights reserved.</p>
+    </footer>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

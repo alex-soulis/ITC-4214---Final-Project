@@ -1,0 +1,62 @@
+{% extends "pages/layout.html" %}
+
+{% block title %}Home - Alex's Sport & Sneaker Lounge{% endblock %}
+
+{% block content %}
+
+{%load static %}
+
+<!-- Welcome Section: Brief Introduction -->
+<section class="text-center" role="region" aria-labelledby="welcome-title">
+    <h2 id="welcome-title">Welcome to Alex's Sport & Sneaker Lounge</h2>
+    <p>Discover the latest trends in shoes, curated just for you.</p>
+    <!-- Update the URL as needed for your wishlist/sneaker tracker page -->
+    
+</section>
+
+<!-- Latest Trends Carousel -->
+<section class="my-5" role="region" aria-roledescription="carousel" aria-labelledby="carousel-title">
+    <h2 class="text-center" id="carousel-title">Latest Trends</h2>
+    <div id="latestTrendsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'pages/images/nike dunk.jpg' %}" class="d-block mx-auto" style="max-width: 500px; height: auto;" alt="Trend 1">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'pages/images/nike air force.jpg' %}" class="d-block mx-auto" style="max-width: 500px; height: auto;" alt="Trend 2">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'pages/images/nike p-6000.jpg' %}" class="d-block mx-auto" style="max-width: 500px; height: auto;" alt="Trend 3">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'pages/images/new balance 9060.jpg' %}" class="d-block mx-auto" style="max-width: 500px; height: auto;" alt="Trend 4">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'pages/images/adidas gazelle.jpg' %}" class="d-block mx-auto" style="max-width: 500px; height: auto;" alt="Trend 5">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'pages/images/adidas spezial.jpg' %}" class="d-block mx-auto" style="max-width: 500px; height: auto;" alt="Trend 6">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#latestTrendsCarousel" data-bs-slide="prev" style="filter: invert(40%);">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#latestTrendsCarousel" data-bs-slide="next" style="filter: invert(40%);">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<!-- Sneaker Drop Countdown -->
+<section class="text-center my-5">
+    <h2>🔥 Next Sneaker Drop Incoming! 🔥</h2>
+    <div id="countdown-box" aria-live="polite">
+        <i class="bi bi-stopwatch-fill"></i>
+        <h3 id="countdown"></h3>
+    </div>
+    <p>Be ready for the latest drop! Secure your pair before it's gone. 🚀</p>
+</section>
+
+{% endblock %}

@@ -1,0 +1,216 @@
+/* UNIVERSAL STYLES (APPLIED TO ALL PAGES) */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: white;
+    color: black;
+}
+
+/*Header */
+header {
+    position: relative; /* Change from fixed to relative */
+    top: 0;
+    width: 100%;
+    background-color: #213A57;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+/* Navigation Bar */
+nav {
+    position: relative; /* Change from fixed to relative */
+    background-color: #14919B;
+}
+
+/* Navbar Text: Bold and Slightly Larger */
+.navbar-nav .nav-link {
+    font-weight: bold;
+    font-size: 1.0rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+
+
+nav ul li a:hover {
+    background-color: #0AD1C8;
+    border-radius: 5px;
+}
+
+/*Custom Buttons */
+.btn-custom {
+    background-color: #0B6477;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #0AD1C8;
+}
+
+/*Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #213A57;
+    color: white;
+    margin-top: 20px;
+}
+
+/*Dark Mode Styles */
+.dark-mode {
+    background-color: #14919B;
+    color: white;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #0AD1C8;
+}
+
+.dark-mode nav {
+    background-color: #45DFB1;
+}
+
+.dark-mode .list-group-item {
+    background-color: #45DFB1;
+    color: white;
+}
+
+/* INDEX PAGE STYLES */
+
+
+
+/* Sneaker Drop Countdown Styling */
+#countdown-box {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff8c00, #ff3b3b);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+#countdown-box i {
+    margin-right: 10px;
+}
+
+/* Countdown Live Effect */
+.drop-live {
+    background: linear-gradient(135deg, #ff3b3b, #ff8c00);
+}
+
+/*PRODUCTS PAGE STYLES */
+
+/*Product Card Styling */
+.product-card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure Product Images Fit Properly */
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    display: block;
+}
+
+/* Card Body Styling */
+.product-card-body {
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+    padding: 15px;
+}
+
+.product-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0B6477;
+}
+
+.product-card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+/*OTHER PAGES (TASKS, ABOUT, CONTACT) */
+
+/*Forms (Used in Contact Page & Tasks Page) */
+form input, form textarea, form select {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form button {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/*About Us - Developer Profile Cards */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.card img {
+    border-radius: 50%;
+    max-width: 150px;
+    margin: 20px auto;
+}
+
+/*Task Table (Used in Tasks Page) */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Social Media Icons */
+.text-dark i {
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.text-dark i:hover {
+    transform: scale(1.2);
+    color: #0B6477; /* Change color on hover */
+}
+
+/* Fix for Dark Mode - Change Icons to White */
+.dark-mode .text-dark i {
+    color: white !important;
+}
+
