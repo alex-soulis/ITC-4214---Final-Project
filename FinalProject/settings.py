@@ -36,7 +36,7 @@ SECRET_KEY = 'django-insecure-n^8!^3)wol9!3_0b22ec-+efd7^#3&bs%hg47ewdh-+dlfb1)2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://red-mule-144011.hostingersite.com/FinalProject/' ]
+ALLOWED_HOSTS = ['https://red-mule-144011.hostingersite.com' ]
 
 
 # Application definition
